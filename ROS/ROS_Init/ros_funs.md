@@ -17,6 +17,8 @@ When a NodeHandle is constructed, it checks to see if the global node state has 
     NodeHandle(const NodeHandle& parent, const std::string& ns, const M_string& remappings);  
 
 # ros::spin()
+    *调用所有的可触发的回调函数，相当于在循环里反复调用spinOnce().*。
     订阅者开始接受话题消息，进入循环，调用callbacks，执行回调函数。
 
 # ros::spinOnce()
+    *只触发一次。*
